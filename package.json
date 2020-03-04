@@ -1,0 +1,9 @@
+{
+  "name": "gym-manager",
+  "version": "0.1.0",
+  "description": "A gym manager project to train my web development skills",
+  "main": "index.js",
+  "repository": "git@github.com:figueiredo-uideveloper/gym-manager.git",
+  "author": "Leandro Figueiredo <uideveloper@figueiredo.dev>",
+  "license": "MIT"
+}
