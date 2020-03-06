@@ -1,0 +1,31 @@
+const gulp = require('gulp')
+
+gulp.task('app', ['app.css'])
+
+gulp.task('app.css', () => {
+    
+})
+
+
+
+
+
+
+// const gulp = require('gulp')
+
+// const sass = require('gulp-sass')
+// const uglifycss = require('gulp-uglifycss')
+// const concat = require('gulp-concat')
+
+// gulp.task('default', () => {
+//     gulp.src('src/assets/scss/main.scss')
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(uglifycss({"uglyComments": true}))
+//     .pipe(concat('style.min.css'))
+//     .pipe(gulp.dest('public/css'))
+// })
+
+// require('./gulpTasks/app')
+// gulp.task('default', () => {
+//     gulp.start('app')
+// })
