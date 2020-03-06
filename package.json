@@ -7,9 +7,7 @@
   "author": "Leandro Figueiredo <uideveloper@figueiredo.dev>",
   "license": "MIT",
   "scripts": {
-    "start": "npm-run-all -p nodemon browsersync",
-    "nodemon": "nodemon server/server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:8001 --files 'public, src/views'"
+    "start": "gulp"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -19,6 +17,7 @@
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-nodemon": "^2.5.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglifycss": "^1.1.0",
     "nodemon": "^2.0.2",
