@@ -1,0 +1,5 @@
+// Gradients
+
+@function make-gradient($color-100, $color-200) {
+    @return $color-100 linear-gradient(160deg, $color-100, $color-200) repeat-x;
+}

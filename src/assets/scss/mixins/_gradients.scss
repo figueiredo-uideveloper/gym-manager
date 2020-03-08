@@ -1,0 +1,5 @@
+// Gradients
+
+@mixin gradient-bg($color-100, $color-200) {
+    background: $color-100 linear-gradient(160deg, $color-100, $color-200) repeat-x;
+}
