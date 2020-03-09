@@ -1,6 +1,17 @@
-@import './functions';
-@import './mixins';
+// Vendor
+@import './vendor/bootstrap-grid';
 
-@import './variables';
+// Tools
+@import './tools.functions';
+@import './tools.mixins';
 
-@import './reset';
+// Settings
+@import './settings.variables';
+
+// Generic
+@import './generic.reset';
+
+// Components
+
+@import './componets.header';
+@import './componets.logo';

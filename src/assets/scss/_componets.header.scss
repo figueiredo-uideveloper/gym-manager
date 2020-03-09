@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 75px;
+    background: make-gradient($primary, $primary-light);
+  }
+}
