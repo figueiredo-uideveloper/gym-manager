@@ -1,0 +1,10 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $white;
+    margin-top: 32px;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: $boxshadow-default;
+}
