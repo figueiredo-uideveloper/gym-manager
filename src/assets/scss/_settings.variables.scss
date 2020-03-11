@@ -3,8 +3,8 @@
 $white:    #fff !default;
 $gray-100: #fcfcfc !default;
 $gray-200: #f2f2f2 !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+$gray-300: #EBEBEB !default;
+$gray-400: #B9B9B9 !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
@@ -88,6 +88,8 @@ $theme-colors: map-merge(
 );
 
 $boxshadow-default: 0px 1px 10px rgba($black, 0.15);
+$border-color: $gray-300;
+$place-holder: $gray-400;
 
 
 
