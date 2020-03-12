@@ -3,13 +3,11 @@
 $white:    #fff !default;
 $gray-100: #fcfcfc !default;
 $gray-200: #f2f2f2 !default;
-$gray-300: #EBEBEB !default;
+$gray-300: #e0e0e0 !default;
 $gray-400: #B9B9B9 !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-500: #4D4D4D !default;
+$gray-600: #3c3c3c !default;
+$gray-700: #363636 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -19,12 +17,7 @@ $grays: map-merge(
     "100": $gray-100,
     "200": $gray-200,
     "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
+    "400": $gray-400
   ),
   $grays
 );
@@ -56,7 +49,7 @@ $colors: map-merge(
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "gray-dark":  $gray-700
   ),
   $colors
 );
@@ -69,7 +62,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $gray-700 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -91,6 +84,9 @@ $boxshadow-default: 0px 1px 10px rgba($black, 0.15);
 $border-color: $gray-300;
 $place-holder: $gray-400;
 
+$link-color: $gray-500;
+$link-color-hover: $black;
+$link-color-active: $black;
 
 
 // Typography
@@ -109,6 +105,7 @@ $font-size-sm:                $font-size-base * .875 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
@@ -127,4 +124,4 @@ $h6-font-size:                $font-size-base !default;
 // Settings for the `<body>` element.
 
 $body-bg:                   make-gradient($gray-200, $gray-100) !default;
-$body-color:                $gray-900 !default;
+$body-color:                $black !default;
