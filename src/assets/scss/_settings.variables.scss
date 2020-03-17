@@ -56,6 +56,7 @@ $colors: map-merge(
 
 $primary:       $yellow;
 $primary-light: adjust-color($yellow, $hue: 3%, $saturation: 10%, $lightness: 1%);
+$primary-lighter: #FFFEF4;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;

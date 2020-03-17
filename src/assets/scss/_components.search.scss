@@ -15,6 +15,11 @@
         &::placeholder {
             color: $place-holder;
         }
+
+        &:focus {
+            border-color: $primary;
+            background: $primary-lighter;
+        }
     }
 
     &__icon {
