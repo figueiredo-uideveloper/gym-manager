@@ -6,9 +6,13 @@
 
                 {% include "./components/search.njk" %}
 
-                {% include "./components/nav.njk" %}
-
-                {% include "./components/profile-nav.njk" %}
+                <div class="nav-wrapper">
+                    {% include "./components/nav.njk" %}
+                    
+                    <div class="nav__profile">
+                        {% include "./components/profile-nav.njk" %}
+                    </div>
+                </div>
             </div>
         </div>
     </header>
