@@ -1,0 +1,19 @@
+.list {
+    &__header {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 0 16px;
+
+        .list {
+            &__column {
+                display: flex;
+                padding: 8px;
+                font-weight: $font-weight-semibold;
+                font-size: $font-size-sm;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $secondary;
+            }
+        }
+    }
+}

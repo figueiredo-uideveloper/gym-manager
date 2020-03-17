@@ -1,6 +1,7 @@
 .header {
   display: flex;
   position: relative;
+  margin-bottom: 32px;
 
   &::before {
     position: absolute;

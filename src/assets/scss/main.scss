@@ -12,11 +12,14 @@
 @import './generic.reset';
 
 // Components
-
 @import './components.dropdown';
 @import './components.header';
+@import './components.list';
 @import './components.logo';
 @import './components.nav';
 @import './components.profile';
 @import './components.search';
 @import './components.topbar';
+
+// Trumps
+@import './trumps.align'

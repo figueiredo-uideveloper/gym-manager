@@ -1,19 +1,17 @@
-{% block header %}
-    <header class="header">
-        <div class="container">
-            <div class="topbar">
-                <div class="logo">{% include "./icons/logo.njk" %}</div>
+<header class="header">
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">{% include "./icons/logo.njk" %}</div>
 
-                {% include "./components/search.njk" %}
+            {% include "./components/search.njk" %}
 
-                <div class="nav-wrapper">
-                    {% include "./components/nav.njk" %}
-                    
-                    <div class="nav__profile">
-                        {% include "./components/profile-nav.njk" %}
-                    </div>
+            <div class="nav-wrapper">
+                {% include "./components/nav.njk" %}
+                
+                <div class="nav__profile">
+                    {% include "./components/profile-nav.njk" %}
                 </div>
             </div>
         </div>
-    </header>
-{% endblock header %}
+    </div>
+</header>
