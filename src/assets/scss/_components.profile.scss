@@ -43,4 +43,13 @@
         visibility: visible;
         transform: rotate(-60deg);
     }
+
+    &__more {
+        position: absolute;
+        bottom: -5px;
+        right: 4px;
+        z-index: 99;
+        width: 24px;
+        height: 24px;
+    }
 }
