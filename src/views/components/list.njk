@@ -1,10 +1,23 @@
 <div class="list">
     <div class="list__header">
-        <div class="list__column">ID</div>
-        <div class="list__column">Instructor</div>
-        <div class="list__column">Modalities</div>
-        <div class="list__column">Shifts</div>
-        <div class="list__column">Week Routine</div>
-        <div class="list__column justify-end">Button</div>
+        <div class="list__row">
+            <div class="list__column">ID</div>
+            <div class="list__column">Instructor</div>
+            <div class="list__column">Modalities</div>
+            <div class="list__column">Shifts</div>
+            <div class="list__column">Week Routine</div>
+            <div class="list__column justify-end">Button</div>
+        </div>
+    </div>
+
+    <div class="list__body">
+        <div class="list__row">
+            <div class="list__column">4583</div>
+            <div class="list__column">{% include "./profileList.njk"%} John Armstrong</div>
+            <div class="list__column"><div>bodybuild</div><div>crossfit</div><div>swimming</div></div>
+            <div class="list__column">Morning, Night</div>
+            <div class="list__column">Mon - Wed - Fri</div>
+            <div class="list__column justify-end"><div>more</div></div>
+        </div>
     </div>
 </div>

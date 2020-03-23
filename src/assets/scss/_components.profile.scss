@@ -52,4 +52,35 @@
         width: 24px;
         height: 24px;
     }
+
+    &--nav {
+        width: 60px;
+        height: 68px;
+    }
+
+    &--list {
+        width: 42px;
+        height: 42px;
+
+        .profile {
+            &__mask {
+                width: 35px;
+                height: 44px;            
+            }
+
+            &__border svg {
+                margin: 0px 0 0 -4px;
+                width: 44px;
+                height: 44px;
+
+                path {
+                    stroke-width: 3;
+                }
+            }
+
+            &__image{
+                background-size: 100%;
+            }
+        }
+    }
 }

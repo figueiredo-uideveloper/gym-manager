@@ -5,9 +5,10 @@ $gray-100: #fcfcfc !default;
 $gray-200: #f2f2f2 !default;
 $gray-300: #e0e0e0 !default;
 $gray-400: #B9B9B9 !default;
-$gray-500: #4D4D4D !default;
-$gray-600: #3c3c3c !default;
-$gray-700: #363636 !default;
+$gray-500: #868686 !default;
+$gray-600: #4D4D4D !default;
+$gray-700: #3c3c3c !default;
+$gray-800: #363636 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -48,8 +49,8 @@ $colors: map-merge(
     "teal":       $teal,
     "cyan":       $cyan,
     "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-700
+    "gray":       $gray-700,
+    "gray-dark":  $gray-800
   ),
   $colors
 );
@@ -57,13 +58,13 @@ $colors: map-merge(
 $primary:       $yellow;
 $primary-light: adjust-color($yellow, $hue: 3%, $saturation: 10%, $lightness: 1%);
 $primary-lighter: #FFFEF4;
-$secondary:     $gray-600 !default;
+$secondary:     $gray-500 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-700 !default;
+$dark:          $gray-800 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -85,7 +86,7 @@ $boxshadow-default: 0px 1px 10px rgba($black, 0.15);
 $border-color: $gray-300;
 $place-holder: $gray-400;
 
-$link-color: $gray-500;
+$link-color: $gray-600;
 $link-color-hover: $black;
 $link-color-active: $black;
 

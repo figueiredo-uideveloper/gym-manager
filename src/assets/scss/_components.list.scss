@@ -1,18 +1,46 @@
 .list {
-    &__header {
+    &__row {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        padding: 0 16px;
-
+        grid-template-columns: 1fr 4fr 4fr 3fr 3fr 1fr;
+        padding-right: 16px;
+        padding-left: 16px;
+        
         .list {
             &__column {
                 display: flex;
                 padding: 8px;
+            }
+        }
+    }
+
+    &__header {
+        .list {
+            &__column {
                 font-weight: $font-weight-semibold;
                 font-size: $font-size-sm;
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 color: $secondary;
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 24px;
+
+        .list {
+            &__row {
+                background: $white;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+            }
+            &__column {
+                font-weight: $font-weight-semibold;
+                font-size: $font-size-base;
+                letter-spacing: .5px;
+                color: $link-color;
+                display: flex;
+                align-items: center;
             }
         }
     }
