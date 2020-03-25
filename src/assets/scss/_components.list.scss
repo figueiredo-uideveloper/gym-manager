@@ -36,11 +36,16 @@
             }
             &__column {
                 font-weight: $font-weight-semibold;
-                font-size: $font-size-base;
+                font-size: $font-size-md;
                 letter-spacing: .5px;
                 color: $link-color;
                 display: flex;
                 align-items: center;
+            }
+
+            &__uppercase {
+                text-transform: uppercase;
+                letter-spacing: 1px;
             }
         }
     }
