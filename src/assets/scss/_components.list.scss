@@ -34,6 +34,14 @@
                 background: $white;
                 border: 1px solid $border-color;
                 border-radius: 4px;
+                margin-bottom: 6px;
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+
+                &:hover {
+                    border-color: $primary-light;
+                    background: $primary-lighter;
+                }
             }
             &__column {
                 font-weight: $font-weight-semibold;
@@ -42,6 +50,16 @@
                 color: $link-color;
                 display: flex;
                 align-items: center;
+
+                &--border {
+                    &-left {
+                        border-left: 1px solid $border-color;
+                    }
+
+                    &-right {
+                        border-right: 1px solid $border-color;
+                    }
+                }
             }
 
             &__uppercase {

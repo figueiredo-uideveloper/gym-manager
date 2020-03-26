@@ -1,3 +1,5 @@
+{% import './profileList.njk' as profile%}
+
 <div class="list">
     <div class="list__header">
         <div class="list__row">
@@ -6,18 +8,54 @@
             <div class="list__column">Modalities</div>
             <div class="list__column">Shifts</div>
             <div class="list__column">Week Routine</div>
-            <div class="list__column justify-end"><button class="button button--rounded button--primary">{% include "../icons/roundedPlus.njk" %}</button></div>
+            <div class="list__column justify-end"><button title="Add new instructor" class="button button--rounded button--primary">{% include "../icons/roundedPlus.njk" %}</button></div>
         </div>
     </div>
 
     <div class="list__body">
         <div class="list__row">
             <div class="list__column">4583</div>
-            <div class="list__column">{% include "./profileList.njk" %}<div class="list__uppercase ml-md">John Armstrong</div></div>
+            <div class="list__column">{{ profile.profileList('john-armstrong-profile.png') }}<div class="list__uppercase ml-md">John Armstrong</div></div>
             <div class="list__column"><div class="tag mr-sm">bodybuild</div><div class="tag mr-sm">crossfit</div><div class="tag">swimming</div></div>
             <div class="list__column">Morning, Night</div>
             <div class="list__column">Mon - Wed - Fri</div>
-            <div class="list__column justify-end">{% include "./buttonMore.njk" %}</div>
+            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+        </div>
+
+        <div class="list__row">
+            <div class="list__column">8547</div>
+            <div class="list__column">{{ profile.profileList('rachel-smith-profile.png') }}<div class="list__uppercase ml-md">Rachel Smith</div></div>
+            <div class="list__column"><div class="tag mr-sm">crossfit</div><div class="tag">swimming</div></div>
+            <div class="list__column">Afternoon</div>
+            <div class="list__column">Tue - Thu - Sat</div>
+            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+        </div>
+
+        <div class="list__row">
+            <div class="list__column">5896</div>
+            <div class="list__column">{{ profile.profileList('joe-mustang-profile.png') }}<div class="list__uppercase ml-md">Joe Mustang</div></div>
+            <div class="list__column"><div class="tag mr-sm">bodybuild</div><div class="tag">crossfit</div></div>
+            <div class="list__column">Morning, Evening</div>
+            <div class="list__column">Fri - Sat</div>
+            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+        </div>
+
+        <div class="list__row">
+            <div class="list__column">3578</div>
+            <div class="list__column">{{ profile.profileList('lara-crossfit-profile.png') }}<div class="list__uppercase ml-md">Lara Crossfit</div></div>
+            <div class="list__column"><div class="tag mr-sm">bodybuild</div><div class="tag mr-sm">crossfit</div><div class="tag">box</div></div>
+            <div class="list__column">Night</div>
+            <div class="list__column">Mon - Fri - Sat</div>
+            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+        </div>
+
+        <div class="list__row">
+            <div class="list__column">1598</div>
+            <div class="list__column">{{ profile.profileList('yung-lee-profile.png') }}<div class="list__uppercase ml-md">Yung Lee</div></div>
+            <div class="list__column"><div class="tag mr-sm">karate</div><div class="tag mr-sm">muay tai</div><div class="tag">jui jitsu</div></div>
+            <div class="list__column">Afternoon, Night</div>
+            <div class="list__column">Thu - Fri - Sat</div>
+            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
         </div>
     </div>
 </div>
