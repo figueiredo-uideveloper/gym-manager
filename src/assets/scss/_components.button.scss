@@ -8,12 +8,17 @@
 
     &--rounded {
         border-radius: 50px;
-        width: 32px;
-        height: 32px;
-        padding: 8px;
+        width: 36px;
+        height: 36px;
+        padding: 10px;
     }
 
     &--primary {
         background: $primary-light;
+    }
+
+    &--more {
+        width: 30px;
+        height: 30px;
     }
 }
