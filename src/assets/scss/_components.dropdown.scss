@@ -1,3 +1,54 @@
 .dropdown {
+  &-wrapper {
     position: relative;
+  }
+
+  position: absolute;
+  background: $white;
+  min-width: 180px;
+  border: 1px solid $border-color;
+}
+
+.dropdown {
+  background: #333;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  display: none;
+}
+
+.dropdown[data-show] {
+  display: block;
+}
+
+.arrow,
+.arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+.arrow::before {
+  content: "";
+  transform: rotate(45deg);
+  background: #333;
+}
+
+.dropdown[data-popper-placement^="top"] > .arrow {
+  bottom: -4px;
+}
+
+.dropdown[data-popper-placement^="bottom"] > .arrow {
+  top: -4px;
+}
+
+.dropdown[data-popper-placement^="left"] > .arrow {
+  right: -4px;
+}
+
+.dropdown[data-popper-placement^="right"] > .arrow {
+  left: -4px;
 }
