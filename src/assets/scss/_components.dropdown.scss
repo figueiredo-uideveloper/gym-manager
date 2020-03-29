@@ -5,7 +5,7 @@
 
   position: absolute;
   background: $white;
-  min-width: 180px;
+  min-width: 150px;
   border: 1px solid $border-color;
   right: 0;
   top: calc(100% - 4px);
@@ -27,10 +27,55 @@
   &__item {
     display: flex;
     align-items: center;
-    padding: 14px;
+    padding: 12px;
+    transition: all .1s ease-in-out;
 
     &:not(:last-child){
       border-bottom: 1px solid $border-color;
+    }
+
+    &:hover {
+      .dropdown {
+        &__icon {
+          svg path {
+            fill: $black;
+          }
+        }
+
+        &__label {
+          color: $black;
+        }
+      }
+    }
+
+    &.is-danger {
+      .dropdown {
+        &__icon {
+          svg path {
+            fill: $danger;
+          }
+        }
+
+        &__label {
+          color: $danger;
+        }
+      }
+
+      &:hover {
+        background: $red-lighter;
+
+        .dropdown {
+          &__icon {
+            svg path {
+              fill: $red-dark;
+            }
+          }
+
+          &__label {
+            color: $red-dark;
+          }
+        }
+      }
     }
   }
 
@@ -38,21 +83,11 @@
     width: 16px;
     height: 16px;
     margin-right: 8px;
-
-    svg path{
-      fill: $secondary;
-    }
-
-    &.is-danger {
-     svg path {
-       fill: $danger;
-     } 
-    }
   }
 
   &__label {
     font-size: $font-size-md;
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-normal;
     color: $secondary;
 
     &.is-danger {
