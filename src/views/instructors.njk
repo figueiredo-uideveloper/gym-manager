@@ -9,38 +9,45 @@
 {% endblock content %}
 
 {% block scripts %}
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script>
-        const buttons = Array.from(document.querySelectorAll('.button-dropdown'));
-        //const tooltip = Array.from(document.querySelectorAll('.dropdown'));//
-
-        //console.log(button)
-
-        //function show() {
-        //    tooltip.setAttribute('data-show', '');
-        //}
-
-        //function hide() {
-        //    tooltip.removeAttribute('data-show');
-        //}
-
-        //const showEvents = ['click', 'focus'];
-
-        //showEvents.forEach(event => {
-        //    button.addEventListener(event, show);
-        //});
-
-        //hideEvents.forEach(event => {
-        //    button.addEventListener(event, hide);
-        //});
+        const buttons = Array.from(document.querySelectorAll('.dropdown-button'));
 
         for (button of buttons) {
             let buttonPopper = button;
-            let dropdownContent = button.nextSibling;
-            console.log(buttonPopper);
-            console.log(dropdownContent);
-        }        
-            //Popper.createPopper(button, tooltip);
+            toggleDataShow(buttonPopper);
+        }
+
+        function toggleDataShow(button) {
+            button.addEventListener("click", function() {
+                let dropdownContent = this.nextElementSibling;
+
+                if (dropdownContent.classList.contains('data-show')) {
+                    dropdownContent.classList.remove("data-show");
+                } else {
+                    let dropdowns = document.getElementsByClassName("dropdown");
+
+                    for (dropdown of dropdowns) {
+                        if (dropdown.classList.contains('data-show')) {
+                            dropdown.classList.remove('data-show');
+                        }
+                    }
+                    dropdownContent.classList.add("data-show");
+                }
+            });
+        }
+
+        
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                let dropdowns = document.getElementsByClassName("dropdown");
+
+                for (dropdown of dropdowns) {
+                    if (dropdown.classList.contains('data-show')) {
+                        dropdown.classList.remove('data-show');
+                    }
+                }
+            }
+        }
 
     </script>
 {% endblock scripts %}

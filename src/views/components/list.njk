@@ -19,7 +19,21 @@
             <div class="list__column"><div class="tag mr-sm">bodybuild</div><div class="tag mr-sm">crossfit</div><div class="tag">swimming</div></div>
             <div class="list__column">Morning, Night</div>
             <div class="list__column">Mon - Wed - Fri</div>
-            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+            <div class="list__column list__column--border-left justify-end">
+                <div class="dropdown-wrapper">
+                    {% include "./buttonMore.njk" %}
+                    <div class="dropdown">
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon">{% include "../icons/pencil.njk" %}</div>
+                            <div class="dropdown__label">Edit</div>
+                        </div>
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon is-danger">{% include "../icons/trash.njk" %}</div>
+                            <div class="dropdown__label is-danger">Delete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="list__row">
@@ -28,7 +42,21 @@
             <div class="list__column"><div class="tag mr-sm">crossfit</div><div class="tag">swimming</div></div>
             <div class="list__column">Afternoon</div>
             <div class="list__column">Tue - Thu - Sat</div>
-            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+            <div class="list__column list__column--border-left justify-end">
+                <div class="dropdown-wrapper">
+                    {% include "./buttonMore.njk" %}
+                    <div class="dropdown">
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon">{% include "../icons/pencil.njk" %}</div>
+                            <div class="dropdown__label">Edit</div>
+                        </div>
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon is-danger">{% include "../icons/trash.njk" %}</div>
+                            <div class="dropdown__label is-danger">Delete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="list__row">
@@ -37,7 +65,21 @@
             <div class="list__column"><div class="tag mr-sm">bodybuild</div><div class="tag">crossfit</div></div>
             <div class="list__column">Morning, Evening</div>
             <div class="list__column">Fri - Sat</div>
-            <div class="list__column list__column--border-left justify-end">{% include "./buttonMore.njk" %}</div>
+            <div class="list__column list__column--border-left justify-end">
+                <div class="dropdown-wrapper">
+                    {% include "./buttonMore.njk" %}
+                    <div class="dropdown">
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon">{% include "../icons/pencil.njk" %}</div>
+                            <div class="dropdown__label">Edit</div>
+                        </div>
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon is-danger">{% include "../icons/trash.njk" %}</div>
+                            <div class="dropdown__label is-danger">Delete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="list__row">
@@ -48,10 +90,16 @@
             <div class="list__column">Mon - Fri - Sat</div>
             <div class="list__column list__column--border-left justify-end">
                 <div class="dropdown-wrapper">
-                    <div class="button-dropdown" aria-describedby="tooltip">{% include "./buttonMore.njk" %}</div>
-                    <div class="dropdown hide" role="tooltip">
-                        My tooltip
-                        <div class="arrow" data-popper-arrow></div>
+                    {% include "./buttonMore.njk" %}
+                    <div class="dropdown">
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon">{% include "../icons/pencil.njk" %}</div>
+                            <div class="dropdown__label">Edit</div>
+                        </div>
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon is-danger">{% include "../icons/trash.njk" %}</div>
+                            <div class="dropdown__label is-danger">Delete</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,17 +113,17 @@
             <div class="list__column">Thu - Fri - Sat</div>
             <div class="list__column list__column--border-left justify-end">
                 <div class="dropdown-wrapper">
-                    <div class="button-dropdown" aria-describedby="tooltip">{% include "./buttonMore.njk" %}</div>
-                    <div class="dropdown hide" role="tooltip">
-                        My tooltip
-                        <div class="arrow" data-popper-arrow></div>
-                    </div>
-                    {# <div class="dropdown">
+                    {% include "./buttonMore.njk" %}
+                    <div class="dropdown">
                         <div class="dropdown__item">
-                            <div class="dropdown__icon">pencil</div>
+                            <div class="dropdown__icon">{% include "../icons/pencil.njk" %}</div>
                             <div class="dropdown__label">Edit</div>
                         </div>
-                    </div> #}
+                        <div class="dropdown__item">
+                            <div class="dropdown__icon is-danger">{% include "../icons/trash.njk" %}</div>
+                            <div class="dropdown__label is-danger">Delete</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
