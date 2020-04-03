@@ -4,7 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 4px;
+    padding: 12px 32px;
+    letter-spacing: .5px;
+    font-size: $font-size-md;
     cursor: pointer;
+    transition: all .1s ease-in-out;
 
     &--rounded {
         border-radius: 50px;
@@ -24,6 +29,16 @@
         }
     }
 
+    &--ghost {
+        border: 1px solid $gray-400;
+        color: $gray-400;
+
+        &:hover {
+            color: $link-color;
+            border-color: $link-color;
+        }
+    }
+
     &--primary {
         background: $primary-light;
 
@@ -32,9 +47,29 @@
         }
     }
 
+    &--danger {
+        background: $danger;
+        color: $white;
+
+        &:hover {
+            background: $danger-hover;
+        }
+
+        svg path {
+            fill: $white;
+        }
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
     &--more {
         width: 30px;
         height: 30px;
+        padding: 0;
         position: relative;
         z-index: 0;
 
