@@ -1,7 +1,8 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')
-const uglifycss = require('gulp-uglifycss')
-const concat = require('gulp-concat')
+const sass = require('gulp-sass');
+const uglifycss = require('gulp-uglifycss');
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 const browserSync = require('browser-sync');
 const nodemon = require('gulp-nodemon');
 
@@ -19,6 +20,21 @@ gulp.task('sass', done => {
 // Sass watching, depending on "sass" task
 gulp.task('sass:watch', function () {
     gulp.watch('./src/assets/scss/**/*.scss', gulp.series('sass'));
+});
+
+// JS compilation
+gulp.task('js', done => {
+    gulp.src('src/assets/js/**/*.js')
+        .pipe(uglify())
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('public/js'))
+
+    done()
+});
+
+// JS watching, depending on "js" task
+gulp.task('js:watch', function () {
+    gulp.watch('./src/assets/js/**/*.js', gulp.series('js'));
 });
 
 // Application watching
@@ -56,4 +72,4 @@ gulp.task(
 // Dev Task:
 // Parallel execution of browser-sync/nodemon
 // and sass watching
-gulp.task('default', gulp.series('sass', gulp.parallel('browser-sync', 'sass:watch', 'appMonitor:watch')));
+gulp.task('default', gulp.series('sass', 'js', gulp.parallel('browser-sync', 'sass:watch', 'js:watch', 'appMonitor:watch')));
