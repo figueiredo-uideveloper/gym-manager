@@ -1,3 +1,29 @@
 <div class="container">
-    Register a new instructor
+<div class="register">
+    <div class="register__column pt-xl">{% include "./components/profileUpload.njk" %}</div>
+    <div class="register__column form">
+        <h1 class="form__title">Register a new instructor</h1>
+        <div class="form__step step-1">
+            <div class="form__group">
+                <div class="form__group-item">
+                    <label class="form__label" for="fullName">Full Name</label>
+                    <input class="form__input--text" type="text" placeholder="Instructor Name">
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-item">
+                    <label class="form__label" for="fullName">E-mail</label>
+                    <input class="form__input--text" type="email" placeholder="Instructor E-mail">
+                </div>
+                <div class="form__group-item">
+                    <label class="form__label" for="phone">Phone</label>
+                    <input class="form__input--text" type="tel" placeholder="(00) 0000-0000">
+                </div>
+            </div>
+        </div>
+        <div class="form__step step-2">
+            step 2
+        </div>
+    </div>
+</div>
 </div>

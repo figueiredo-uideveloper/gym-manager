@@ -1,0 +1,23 @@
+.register {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
+
+        &__title {
+            margin-top: 8px;
+            margin-bottom: 24px;
+            font-size: $font-size-xl;
+            font-weight: $font-weight-semibold;
+            color: $gray-500;
+            letter-spacing: .5px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}

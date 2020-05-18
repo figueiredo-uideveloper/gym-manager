@@ -1,0 +1,35 @@
+.form {
+    &__group {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &-item {
+            width: 100%;
+            
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
+    &__label {
+        display: flex;
+        font-size: $font-size-sm;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        &--text {
+            width: 100%;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            padding: 8px;
+
+            &::placeholder {
+                color: $gray-400;
+            }
+        }
+    }
+}

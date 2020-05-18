@@ -58,6 +58,33 @@
         height: 68px;
     }
 
+    &--upload {
+        width: 140px;
+        height: 148px;
+
+        .profile {
+            &__mask {
+                width: 128px;
+                height: 148px;
+                left: 5px;
+                position: relative;
+                top: 5px;
+            }
+
+            &__image{
+                padding: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #efefef;
+
+                svg path {
+                    fill: $gray-400;
+                }
+            }
+        }
+    }
+
     &--list {
         width: 35px;
         height: 42px;
