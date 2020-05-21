@@ -1,23 +1,64 @@
 .form {
-    &__group {
+    &__row {
         display: flex;
 
         &:not(:last-child) {
             margin-bottom: 24px;
         }
+    }
 
-        &-item {
-            width: 100%;
-            
-            &:not(:last-child) {
-                margin-right: 16px;
-            }
+    &__column {
+        width: 100%;
+        
+        &:not(:last-child) {
+            margin-right: 16px;
         }
     }
+
     &__label {
         display: flex;
         font-size: $font-size-sm;
         margin-bottom: 8px;
+    }
+
+    &__radio,
+    &__checkbox {
+        &--item {
+            width: 100%;
+
+            &>[class^="form__input"] {
+                cursor: pointer;
+            }
+
+            &.checked {
+                [class^="form__input"] {
+                    border: 2px solid $primary !important;
+                    padding: 11px 15px;
+                }
+            }
+
+            &:first-child {
+                [class^="form__input"] {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-right: none;
+                }
+            }
+
+            &:last-child {
+                [class^="form__input"] {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+            &:not(:first-child):not(:last-child) {
+                [class^="form__input"] {
+                    border-radius: 0;
+                    border-right: none;
+                }
+            }
+        }
     }
 
     &__input {
@@ -25,11 +66,52 @@
             width: 100%;
             border: 1px solid $border-color;
             border-radius: 3px;
-            padding: 8px;
+            padding: 12px 16px;
+            font-size: $font-size-sm;
 
             &::placeholder {
                 color: $gray-400;
             }
         }
+
+        &--radio,
+        &--checkbox {
+            @extend .form__label;
+            color: $gray-400;
+            margin: 0;
+            line-height: normal;
+            border: 1px solid $border-color;
+            background: $white;
+            border-radius: 3px;
+            padding: 12px 16px;
+            justify-content: center;
+        }
+
+        &--unified {
+            display: flex;
+
+            [class^="form__input"]:not(.form__input--radio):not(.form__input--checkbox) {
+                &:first-child {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-right: none;
+                }
+
+                &:last-child {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                &:not(:first-child):not(:last-child) {
+                    border-radius: 0;
+                    border-right: none;
+                }
+            }
+
+        }
+    }
+
+    &__hidden {
+        display: none;
     }
 }
