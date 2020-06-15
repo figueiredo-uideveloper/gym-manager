@@ -17,4 +17,8 @@ routes.get('/register', function (req, res) {
     res.render('register')
 })
 
+routes.get('/view', function (req, res) {
+    res.render('view')
+})
+
 module.exports = routes
