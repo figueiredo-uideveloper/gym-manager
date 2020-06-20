@@ -6,7 +6,9 @@ for (button of buttons) {
 }
 
 function toggleDataShow(button) {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+        
         let dropdownContent = this.nextElementSibling;
 
         if (dropdownContent.classList.contains('data-show')) {
