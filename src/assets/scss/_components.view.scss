@@ -1,7 +1,13 @@
 .view {
-    padding-left: 108px;
+    padding-top: 16px;
     padding-right: 108px;
+    padding-left: 108px;
     padding-bottom: 48px;
     display: grid;
     grid-template-columns: 176px 1fr 250px;
+
+    &__data {
+        padding-left: 52px;
+        padding-right: 52px;
+    }
 }

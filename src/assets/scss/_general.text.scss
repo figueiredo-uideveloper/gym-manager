@@ -1,0 +1,30 @@
+.title {
+    font-size: $title-size-xl;
+    line-height: normal;
+    margin: 0;
+}
+
+.text {
+    &-lg {
+        font-size: $font-size-lg;
+    }
+    &-base {
+        font-size: $font-size-base;
+    }
+
+    &-display {
+        &-xl {
+            font-size: $title-size-xl;
+        }
+    }
+
+    &-normal {
+        font-weight: 400;
+    }
+    &-semibold {
+        font-weight: 600;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+}

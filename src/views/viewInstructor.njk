@@ -1,5 +1,28 @@
 <div class="container">
     <div class="view">
-        {% include "components/profileView.njk" %}
+        <div>
+            {% include "components/profileView.njk" %}
+        </div>
+
+        <div class="view__data">
+            <h1 class="title">John Armstrong</h1>
+            <div class="display-flex align-center text-lg color-text-label ml-xs">
+                31 years old - <span class="icon color-icon-label ml-xs">{% include "icons/male.njk" %}</span>
+            </div>
+            <div class="display-flex mt-md">
+                <div class="display-flex align-center text-base color-text-label-dark text-semibold"><span class="icon color-icon-label-dark mr-xs">{% include "icons/smartphone.njk" %}</span>(11) 99440-0241</div>
+                <div class="display-flex align-center text-base color-text-label-dark text-semibold ml-md"><span class="icon color-icon-label-dark mr-xs">{% include "icons/mail.njk" %}</span>john.armstrong@gym.com</div>
+            </div>
+            <div class="display-flex mt-md">
+                <div class="display-flex align-base text-display-xl color-text-label-dark text-semibold">
+                    <span class="icon-lg color-icon-primary mr-xs">{% include "icons/height.njk" %}</span>
+                    <span>1.80m</span>
+                </div>
+                <div class="display-flex align-base text-display-xl color-text-label-dark text-semibold ml-lg">
+                    <span class="icon-lg color-icon-primary mr-xs">{% include "icons/weight.njk" %}</span>
+                    <span>88.3kg</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

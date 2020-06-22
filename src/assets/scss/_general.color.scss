@@ -1,0 +1,24 @@
+.color {
+    &-text {
+        &-label {
+            color: $gray-500;
+
+            &-dark {
+                color: $gray-600;
+            }
+        }
+    }
+
+    &-icon {
+        &-label {
+            fill: $gray-500;
+
+            &-dark {
+                fill: $gray-600;
+            }
+        }
+        &-primary {
+            fill: $primary;
+        }
+    }
+}
