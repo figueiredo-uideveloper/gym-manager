@@ -1,0 +1,23 @@
+.box {
+    background: $white;
+    border: 1px solid $border-color;
+    padding: 32px 24px;
+    border-radius: 4px;
+
+    &__label {
+        color: $gray-500;
+        text-transform: uppercase;
+        font-size: $font-size-md;
+        margin-bottom: 4px;
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+    }
+
+    &__text {
+        color: $gray-600;
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-base;
+    }
+}
