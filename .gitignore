@@ -108,3 +108,6 @@ dist
 
 # Compiled css
 public/css/*
+
+#DB
+db/

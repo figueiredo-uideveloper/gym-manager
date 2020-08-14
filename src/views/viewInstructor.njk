@@ -5,22 +5,27 @@
         </div>
 
         <div class="view__data">
-            <h1 class="title">John Armstrong</h1>
+            <h1 class="title">{{ instructor.fullName }}</h1>
             <div class="display-flex align-center text-lg color-text-label ml-xs">
-                31 years old - <span class="icon color-icon-label ml-xs">{% include "icons/male.njk" %}</span>
+               {{ instructor.age }} years old - 
+               {% if instructor.gender == 'Male' %}
+                    <span class="icon color-icon-label ml-xs mr-xs">{% include "icons/male.njk" %}</span> Male
+               {% else %}
+                    <span class="icon color-icon-label ml-xs mr-xs">{% include "icons/female.njk" %}</span> Female
+               {% endif %}
             </div>
             <div class="display-flex mt-md">
-                <div class="display-flex align-center text-base color-text-label-dark text-semibold"><span class="icon color-icon-label-dark mr-xs">{% include "icons/smartphone.njk" %}</span>(11) 99440-0241</div>
-                <div class="display-flex align-center text-base color-text-label-dark text-semibold ml-md"><span class="icon color-icon-label-dark mr-xs">{% include "icons/mail.njk" %}</span>john.armstrong@gym.com</div>
+                <div class="display-flex align-center text-base color-text-label-dark text-semibold"><span class="icon color-icon-label-dark mr-xs">{% include "icons/smartphone.njk" %}</span>{{ instructor.phone }}</div>
+                <div class="display-flex align-center text-base color-text-label-dark text-semibold ml-md"><span class="icon color-icon-label-dark mr-xs">{% include "icons/mail.njk" %}</span>{{ instructor.email }}</div>
             </div>
             <div class="display-flex mt-md">
                 <div class="display-flex align-base text-display-xl color-text-label-dark text-semibold">
                     <span class="icon-lg color-icon-primary mr-xs">{% include "icons/height.njk" %}</span>
-                    <span>1.80m</span>
+                    <span>{{ instructor.height }}m</span>
                 </div>
                 <div class="display-flex align-base text-display-xl color-text-label-dark text-semibold ml-lg">
                     <span class="icon-lg color-icon-primary mr-xs">{% include "icons/weight.njk" %}</span>
-                    <span>88.3kg</span>
+                    <span>{{ instructor.weight }}kg</span>
                 </div>
             </div>
         </div>
@@ -30,10 +35,14 @@
             <div class="box__text">Mon - Wed - Fri</div>
 
             <div class="box__label">Shifts</div>
-            <div class="box__text">Morning, Night</div>
+            <div class="box__text">Morning - Night</div>
 
             <div class="box__label">Modalities</div>
-            <div class="display-flex flex-wrap"><div class="tag mr-sm mb-sm">bodybuild</div> <div class="tag mr-sm mb-sm">crossfit</div> <div class="tag mr-sm">swimming</div></div>
+            <div class="display-flex flex-wrap">
+                {% for modality in instructor.modalities %}
+                    <div class="tag mr-sm mb-sm">{{ modality }}</div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
