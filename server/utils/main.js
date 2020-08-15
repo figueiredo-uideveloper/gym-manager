@@ -20,5 +20,26 @@ module.exports = {
         const maskedPhone = `(${DDD}) ${firstPart}-${lastPart}`
 
         return maskedPhone
+    },
+    convertToArray: function(item) {
+        if (typeof(item) == 'string') {
+            return [item]
+        }
+
+        return item
+    },
+    separatorDashString: function(item) {
+        
+        let itemString = convertToString(item)
+        
+        return itemString.replace(/,/g, " - ")
     }
+}
+
+const convertToString = function(item) {
+    if (typeof(item) == 'string') {
+        return item
+    }
+
+    return String(item)
 }

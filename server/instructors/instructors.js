@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../../db/data.json')
-const { age, phone } = require('../utils/main')
+const { age, phone, convertToArray, separatorDashString } = require('../utils/main')
 
 // create
 exports.post = function(req, res) {
@@ -50,7 +50,9 @@ exports.view = function (req, res) {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         phone: phone(foundInstructor.phone),
-        routine: "",
+        routine: separatorDashString(foundInstructor.routine),
+        shift: separatorDashString(foundInstructor.shift),
+        modalities: convertToArray(foundInstructor.modalities),
     }
 
     if (!foundInstructor) return res.send("Instructor not found!")
