@@ -1,0 +1,158 @@
+<div class="form__step step-1 pr-md">
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="fullName">Full Name</label>
+            <input class="form__input--text" type="text" name="fullName" placeholder="Instructor Name">
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="email">E-mail</label>
+            <input class="form__input--text" name="email" type="email" placeholder="Instructor E-mail">
+        </div>
+        <div class="form__column">
+            <label class="form__label" for="phone">Phone</label>
+            <input class="form__input--text" name="phone" type="tel" placeholder="(00) 0000-0000">
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="birth">Date of Birth</label>
+            <input class="form__input--text" name="birth" type="date" placeholder="MM - DD - YYYY">
+        </div>
+        <div class="form__column">
+            <label class="form__label">Gender</label>
+            <div class="form__input--unified form__radio">
+                <div class="form__radio--item">
+                    <label class="form__input--radio" for="male"><div class="form__icon mr-sm">{% include "../icons/male.njk" %}</div> Male</label>
+                    <input id="male" class="form__hidden" type="radio" value="Male" name="gender" checked>
+                </div>
+                <div class="form__radio--item">
+                    <label class="form__input--radio" for="female"><div class="form__icon mr-sm">{% include "../icons/female.njk" %}</div> Famale</label>
+                    <input id="female" class="form__hidden" type="radio" value="Female" name="gender">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="height">Height</label>
+            <input class="form__input--text" name="height" type="text" placeholder="0.00 m">
+        </div>
+        <div class="form__column">
+            <label class="form__label" for="weight">Weight</label>
+            <input class="form__input--text" name="weight" type="text" placeholder="0.00 kg">
+        </div>
+    </div>
+</div>
+<div class="form__step step-2 pl-md">
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label">Week Routine</label>
+            <div class="form__input--unified form__checkbox">
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="mon">Mon</label>
+                    <input id="mon" class="form__hidden" type="checkbox" value="Mon" name="routine">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="tue">Tue</label>
+                    <input id="tue" class="form__hidden" type="checkbox" value="Tue" name="routine">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="wed">Wed</label>
+                    <input id="wed" class="form__hidden" type="checkbox" value="Wed" name="routine">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="thu">Thu</label>
+                    <input id="thu" class="form__hidden" type="checkbox" value="Thu" name="routine">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="fri">Fri</label>
+                    <input id="fri" class="form__hidden" type="checkbox" value="Fri" name="routine">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="sat">Sat</label>
+                    <input id="sat" class="form__hidden" type="checkbox" value="Sat" name="routine">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="sun">Sun</label>
+                    <input id="sun" class="form__hidden" type="checkbox" value="Sun" name="routine">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label">Shifts</label>
+            <div class="form__input--unified form__checkbox">
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="morning">Morning</label>
+                    <input id="morning" class="form__hidden" type="checkbox" value="Morning" name="shift">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="afternoon">Afternoon</label>
+                    <input id="afternoon" class="form__hidden" type="checkbox" value="Afternoon" name="shift">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="evening">Evening</label>
+                    <input id="evening" class="form__hidden" type="checkbox" value="Evening" name="shift">
+                </div>
+                <div class="form__checkbox--item">
+                    <label class="form__input--checkbox" for="night">Night</label>
+                    <input id="night" class="form__hidden" type="checkbox" value="Night" name="shift">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label">Modalities</label>
+
+            <div class="form__input--unified-group form__checkbox">
+                <div class="unified-group__row">
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="bodybuild">bodybuild</label>
+                        <input id="bodybuild" class="form__hidden" type="checkbox" value="bodybuild" name="modalities">
+                    </div>
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="crossfit">crossfit</label>
+                        <input id="crossfit" class="form__hidden" type="checkbox" value="crossfit" name="modalities">
+                    </div>
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="swimming">swimming</label>
+                        <input id="swimming" class="form__hidden" type="checkbox" value="swimming" name="modalities">
+                    </div>
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="box">box</label>
+                        <input id="box" class="form__hidden" type="checkbox" value="box" name="modalities">
+                    </div>
+                </div>
+
+                <div class="unified-group__row">
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="karate">karate</label>
+                        <input id="karate" class="form__hidden" type="checkbox" value="karate" name="modalities">
+                    </div>
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="jiujitsu">jiu jitsu</label>
+                        <input id="jiujitsu" class="form__hidden" type="checkbox" value="jiu jitsu" name="modalities">
+                    </div>
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="muayThai">muay thai</label>
+                        <input id="muayThai" class="form__hidden" type="checkbox" value="muay thai" name="modalities">
+                    </div>
+                    <div class="form__checkbox--item">
+                        <label class="form__input--checkbox" for="calisthenics">calisthenics</label>
+                        <input id="calisthenics" class="form__hidden" type="checkbox" value="calisthenics" name="modalities">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__row">
+        <div class="form__column display-flex justify-end">
+            <button class="button button--primary" type="submit">Register</button>
+        </div>
+    </div>
+</div>

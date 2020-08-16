@@ -7,7 +7,7 @@ routes.get('/', function (req, res) {
 })
 
 routes.get('/instructors', function (req, res) {
-    res.render('instructors')
+    res.render('instructors/index')
 })
 
 routes.get('/members', function (req, res) {
@@ -15,7 +15,7 @@ routes.get('/members', function (req, res) {
 })
 
 routes.get('/instructor/create', function (req, res) {
-    res.render('registerLayout')
+    res.render('instructors/create')
 })
 
 routes.get('/instructor/view/:id', instructors.view)

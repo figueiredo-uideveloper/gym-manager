@@ -1,3 +1,9 @@
+{% extends 'layout.njk' %}
+
+{% block header %}
+    {% include "./header.njk" %}
+{% endblock header %}
+
 <div class="container">
     <div class="view">
         <div>
@@ -46,3 +52,7 @@
         </div>
     </div>
 </div>
+
+{% block scripts %}
+    <script src="/js/scripts.js"></script>
+{% endblock scripts %}

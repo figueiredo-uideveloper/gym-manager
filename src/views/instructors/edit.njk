@@ -1,0 +1,23 @@
+{% extends '../layout.njk' %}
+
+{% block header %}
+    {% include "../header.njk" %}
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+<form class="register" method="POST" action="/instructors" >
+    <div class="register__column pt-xl">{% include "../components/profileUpload.njk" %}</div>
+    <div class="register__column form">
+        <h1 class="form__title">Edit instructor</h1>
+
+        {% include "./fields.njk" %}
+        
+    </div>
+</form>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/js/scripts.js"></script>
+{% endblock scripts %}
