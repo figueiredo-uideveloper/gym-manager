@@ -2,6 +2,25 @@ const fs = require('fs')
 const data = require('../../db/data.json')
 const { age, phone, convertToArray, separatorDashString } = require('../utils/main')
 
+// show
+exports.view = function (req, res) {
+    const { id } = req.params
+    const foundInstructor = data.instructors.find(instructor => instructor.id == id)
+
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        phone: phone(foundInstructor.phone),
+        routine: separatorDashString(foundInstructor.routine),
+        shift: separatorDashString(foundInstructor.shift),
+        modalities: convertToArray(foundInstructor.modalities),
+    }
+
+    if (!foundInstructor) return res.send("Instructor not found!")
+
+    res.render('instructors/view', { instructor })
+}
+
 // create
 exports.post = function(req, res) {
     let { 
@@ -41,21 +60,16 @@ exports.post = function(req, res) {
 
 }
 
-// show
-exports.view = function (req, res) {
+// edit
+exports.edit = function (req, res) {
     const { id } = req.params
     const foundInstructor = data.instructors.find(instructor => instructor.id == id)
 
     const instructor = {
         ...foundInstructor,
-        age: age(foundInstructor.birth),
-        phone: phone(foundInstructor.phone),
-        routine: separatorDashString(foundInstructor.routine),
-        shift: separatorDashString(foundInstructor.shift),
-        modalities: convertToArray(foundInstructor.modalities),
     }
 
     if (!foundInstructor) return res.send("Instructor not found!")
-    
-    res.render('view', { instructor })
+
+    res.render('instructors/edit', { instructor })
 }

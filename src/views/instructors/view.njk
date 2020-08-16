@@ -1,13 +1,14 @@
 {% extends 'layout.njk' %}
 
 {% block header %}
-    {% include "./header.njk" %}
+    {% include "../header.njk" %}
 {% endblock header %}
 
+{% block content %}
 <div class="container">
     <div class="view">
         <div>
-            {% include "components/profileView.njk" %}
+            {% include "../components/profileView.njk" %}
         </div>
 
         <div class="view__data">
@@ -52,6 +53,7 @@
         </div>
     </div>
 </div>
+{% endblock content %}
 
 {% block scripts %}
     <script src="/js/scripts.js"></script>

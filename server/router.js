@@ -20,6 +20,8 @@ routes.get('/instructor/create', function (req, res) {
 
 routes.get('/instructor/view/:id', instructors.view)
 
+routes.get('/instructor/:id/edit', instructors.edit)
+
 routes.post("/instructors", instructors.post)
 
 module.exports = routes
