@@ -12,7 +12,7 @@ module.exports = {
 
         return age
     },
-    phone: function(phoneNumber){
+    phone: function(phoneNumber) {
         const DDD = phoneNumber.slice(0, 2)
         const firstPart = phoneNumber.slice(2, 7)
         const lastPart = phoneNumber.slice(7, 11)
@@ -21,25 +21,7 @@ module.exports = {
 
         return maskedPhone
     },
-    convertToArray: function(item) {
-        if (typeof(item) == 'string') {
-            return [item]
-        }
-
-        return item
-    },
-    separatorDashString: function(item) {
-        
-        let itemString = convertToString(item)
-        
-        return itemString.replace(/,/g, " - ")
+    isObject: function(object) {
+        return typeof(object) == "object"
     }
-}
-
-const convertToString = function(item) {
-    if (typeof(item) == 'string') {
-        return item
-    }
-
-    return String(item)
 }

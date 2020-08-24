@@ -1,6 +1,11 @@
 const fs = require('fs')
 const data = require('../../db/data.json')
-const { age, phone, convertToArray, separatorDashString } = require('../utils/main')
+const { age, phone, isObject } = require('../utils/main')
+
+// index
+exports.index = function (req, res) {
+    res.render('instructors/index', {instructors: data.instructors})
+}
 
 // show
 exports.view = function (req, res) {
@@ -11,9 +16,9 @@ exports.view = function (req, res) {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         phone: phone(foundInstructor.phone),
-        routine: separatorDashString(foundInstructor.routine),
-        shift: separatorDashString(foundInstructor.shift),
-        modalities: convertToArray(foundInstructor.modalities),
+        routine: foundInstructor.routine,
+        shift: foundInstructor.shift,
+        modalities: foundInstructor.modalities,
     }
 
     if (!foundInstructor) return res.send("Instructor not found!")
@@ -46,16 +51,16 @@ exports.post = function(req, res) {
         gender,
         height,
         weight,
-        routine,
-        shift,
-        modalities
+        routine: isObject(routine) ? routine : [routine],
+        shift: isObject(shift) ? shift : [shift],
+        modalities: isObject(modalities) ? modalities : [modalities]
     })
 
     fs.writeFile('db/data.json', JSON.stringify(data, null, 4), function(err) {
 
         if(err) throw err;
 
-        return res.send(data)
+        return res.redirect('/instructors')
     })
 
 }
