@@ -21,9 +21,9 @@
                     <span class="icon color-icon-label ml-xs mr-xs">{% include "icons/female.njk" %}</span> Female
                {% endif %}
             </div>
-            <div class="display-flex mt-md">
+            <div class="mt-md">
                 <div class="display-flex align-center text-base color-text-label-dark text-semibold"><span class="icon color-icon-label-dark mr-xs">{% include "icons/smartphone.njk" %}</span>{{ instructor.phone }}</div>
-                <div class="display-flex align-center text-base color-text-label-dark text-semibold ml-md"><span class="icon color-icon-label-dark mr-xs">{% include "icons/mail.njk" %}</span>{{ instructor.email }}</div>
+                <div class="display-flex align-center text-base color-text-label-dark text-semibold mt-md"><span class="icon color-icon-label-dark mr-xs">{% include "icons/mail.njk" %}</span>{{ instructor.email }}</div>
             </div>
             <div class="display-flex mt-md">
                 <div class="display-flex align-base text-display-xl color-text-label-dark text-semibold">
@@ -38,16 +38,24 @@
         </div>
 
         <div class="view__box box">
-            <div class="box__label">Week Routine</div>
-            <div class="box__text">{{ instructor.routine }}</div>
-
-            <div class="box__label">Shifts</div>
-            <div class="box__text">{{ instructor.shift }}</div>
-
             <div class="box__label">Modalities</div>
-            <div class="display-flex flex-wrap">
+            <div class="display-flex flex-wrap minus-mb-sm">
                 {% for modality in instructor.modalities %}
                     <div class="tag mr-sm mb-sm">{{ modality }}</div>
+                {% endfor %}
+            </div>
+            
+            <div class="box__label">Week Routine</div>
+            <div class="box__text">
+                {% for routine in instructor.routine %}
+                    {{ routine }}{% if loop.index < instructor.routine.length %} - {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="box__label">Shifts</div>
+            <div class="box__text">
+                {% for shift in instructor.shift %}
+                    {{ shift }}{% if loop.index < instructor.shift.length %},{% endif %}
                 {% endfor %}
             </div>
         </div>

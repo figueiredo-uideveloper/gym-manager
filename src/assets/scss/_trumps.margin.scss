@@ -135,3 +135,120 @@
         }
     }
 }
+
+.minus {
+    &-m {
+        &x {
+            &-xs {
+                margin-left: -4px;
+                margin-right: -4px;
+            }
+            &-sm {
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+            &-md {
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+            &-lg {
+                margin-left: -32px;
+                margin-right: -32px;
+            }
+            &-xl {
+                margin-left: -64px;
+                margin-right: -64px;
+            }
+        }
+        &y {
+            &-xs {
+                margin-top: -4px;
+                margin-bottom: -4px;
+            }
+            &-sm {
+                margin-top: -8px;
+                margin-bottom: -8px;
+            }
+            &-md {
+                margin-top: -16px;
+                margin-bottom: -16px;
+            }
+            &-lg {
+                margin-top: -32px;
+                margin-bottom: -32px;
+            }
+            &-xl {
+                margin-top: -64px;
+                margin-bottom: -64px;
+            }
+        }
+        &t {
+            &-xs {
+                margin-top: -4px;
+            }
+            &-sm {
+                margin-top: -8px;
+            }
+            &-md {
+                margin-top: -16px;
+            }
+            &-lg {
+                margin-top: -32px;
+            }
+            &-xl {
+                margin-top: -64px;
+            }
+        }
+        &b {
+            &-xs {
+                margin-bottom: -4px;
+            }
+            &-sm {
+                margin-bottom: -8px;
+            }
+            &-md {
+                margin-bottom: -16px;
+            }
+            &-lg {
+                margin-bottom: -32px;
+            }
+            &-xl {
+                margin-bottom: -64px;
+            }
+        }
+        &l {
+            &-xs {
+                margin-left: -4px;
+            }
+            &-sm {
+                margin-left: -8px;
+            }
+            &-md {
+                margin-left: -16px;
+            }
+            &-lg {
+                margin-left: -32px;
+            }
+            &-xl {
+                margin-left: -64px;
+            }
+        }
+        &r {
+            &-xs {
+                margin-right: -4px;
+            }
+            &-sm {
+                margin-right: -8px;
+            }
+            &-md {
+                margin-right: -16px;
+            }
+            &-lg {
+                margin-right: -32px;
+            }
+            &-xl {
+                margin-right: -64px;
+            }
+        }
+    }
+}
