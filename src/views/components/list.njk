@@ -16,21 +16,42 @@
         {% for instructor in instructors %}
             <a href="/instructor/view/{{ instructor.id }}" class="list__row" instructor-id id="{{ instructor.id }}">
                 <div class="list__column">{{ instructor.id }}</div>
-                <div class="list__column">{{ profile.profileList('john-armstrong-profile.png') }}<div class="list__uppercase ml-md">{{ instructor.fullName }}</div></div>
+                <div class="list__column">{{ profile.profileList('profile_none.svg') }}<div class="list__uppercase ml-md">{{ instructor.fullName }}</div></div>
                 <div class="list__column">
-                    {% for modality in instructor.modalities %}
-                        <div class="tag mr-sm"> {{ modality }} </div>
-                    {% endfor %}
+                    {% if instructor.modalities.length > 3 %}
+                        {% for i in range(0, 3) %}
+                            <div class="tag mr-sm"> {{ instructor.modalities[i] }} </div>
+                            {% if loop.last %} <div class="tag mr-sm"> +{{ instructor.modalities.length - 3 }} </div> {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(0, instructor.modalities.length) %}
+                            <div class="tag mr-sm"> {{ instructor.modalities[i] }} </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class="list__column">
-                    {% for routine in instructor.routine %}
-                        {{ routine }}{% if loop.index < instructor.routine.length %} - {% endif %}
-                    {% endfor %}
+                    {% if instructor.routine.length > 3 %}
+                        {% for i in range(0, 3) %}
+                            {{ instructor.routine[i] }}{% if loop.index < 3 %} - {% endif %}
+                            {% if loop.last %} <div class="tag tag--default ml-xs"> +{{ instructor.routine.length - 3 }} </div> {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(0, instructor.routine.length) %}
+                            {{ instructor.routine[i] }}{% if loop.index < instructor.routine.length %} - {% endif %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class="list__column">
-                    {% for shift in instructor.shift %}
-                        {{ shift }}{% if loop.index < instructor.shift.length %},{% endif %}
-                    {% endfor %}
+                    {% if instructor.shift.length > 2 %}
+                        {% for i in range(0, 2) %}
+                            {{ instructor.shift[i] }}{% if loop.index < 2 %}, {% endif %}
+                            {% if loop.last %} <div class="tag tag--default ml-xs"> +{{ instructor.shift.length - 2 }} </div> {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(0, instructor.shift.length) %}
+                            {{ instructor.shift[i] }}{% if loop.index < instructor.shift.length %}, {% endif %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class="list__column list__column--border-left justify-end">
                     <div class="dropdown-wrapper">
@@ -50,7 +71,7 @@
             </a>
         {% endfor %}
 
-        <div class="list__row">
+        {# <div class="list__row">
             <div class="list__column">8547</div>
             <div class="list__column">{{ profile.profileList('rachel-smith-profile.png') }}<div class="list__uppercase ml-md">Rachel Smith</div></div>
             <div class="list__column"><div class="tag mr-sm">crossfit</div><div class="tag">swimming</div></div>
@@ -140,7 +161,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> #}
     </div>
 </div>
 

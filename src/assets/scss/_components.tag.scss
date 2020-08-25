@@ -10,4 +10,8 @@
     color: $link-color;
     letter-spacing: .5px;
     cursor: default;
+
+    &--default {
+        border-color: $gray-400;
+    }
 }
