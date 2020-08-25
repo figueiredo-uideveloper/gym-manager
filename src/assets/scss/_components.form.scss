@@ -32,8 +32,8 @@
 
             &.checked {
                 [class^="form__input"] {
-                    border: 2px solid $primary !important;
-                    padding: 11px 15px;
+                    border: 1px solid $primary !important;
+                    background: $primary-lighter;
                     color: $black;
                 }
 

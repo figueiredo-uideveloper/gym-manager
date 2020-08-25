@@ -85,11 +85,11 @@
             <div class="form__input--unified form__checkbox">
                 <div
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Mon' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Mon' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor -%}
                 ">
                     <label class="form__input--checkbox" for="mon">Mon</label>
                     <input id="mon" class="form__hidden" type="checkbox" value="Mon" name="routine">
@@ -97,11 +97,11 @@
 
                 <div
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Tue' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Tue' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="tue">Tue</label>
                     <input id="tue" class="form__hidden" type="checkbox" value="Tue" name="routine">
@@ -109,11 +109,11 @@
 
                 <div
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Wed' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Wed' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="wed">Wed</label>
                     <input id="wed" class="form__hidden" type="checkbox" value="Wed" name="routine">
@@ -121,11 +121,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Thu' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Thu' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="thu">Thu</label>
                     <input id="thu" class="form__hidden" type="checkbox" value="Thu" name="routine">
@@ -133,11 +133,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Fri' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Fri' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="fri">Fri</label>
                     <input id="fri" class="form__hidden" type="checkbox" value="Fri" name="routine">
@@ -145,11 +145,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Sat' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Sat' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="sat">Sat</label>
                     <input id="sat" class="form__hidden" type="checkbox" value="Sat" name="routine">
@@ -157,11 +157,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for routine in instructor.routine %}
-                        {% if routine == 'Sun' %}
+                    {% for routine in instructor.routine -%}
+                        {% if routine == 'Sun' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="sun">Sun</label>
                     <input id="sun" class="form__hidden" type="checkbox" value="Sun" name="routine">
@@ -175,11 +175,11 @@
             <div class="form__input--unified form__checkbox">
                 <div 
                     class="form__checkbox--item
-                    {% for shift in instructor.shift %}
-                        {% if shift == 'Morning' %}
+                    {% for shift in instructor.shift -%}
+                        {% if shift == 'Morning' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="morning">Morning</label>
                     <input id="morning" class="form__hidden" type="checkbox" value="Morning" name="shift">
@@ -187,11 +187,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for shift in instructor.shift %}
-                        {% if shift == 'Afternoon' %}
+                    {% for shift in instructor.shift -%}
+                        {% if shift == 'Afternoon' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="afternoon">Afternoon</label>
                     <input id="afternoon" class="form__hidden" type="checkbox" value="Afternoon" name="shift">
@@ -199,11 +199,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for shift in instructor.shift %}
-                        {% if shift == 'Evening' %}
+                    {% for shift in instructor.shift -%}
+                        {% if shift == 'Evening' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="evening">Evening</label>
                     <input id="evening" class="form__hidden" type="checkbox" value="Evening" name="shift">
@@ -211,11 +211,11 @@
 
                 <div 
                     class="form__checkbox--item
-                    {% for shift in instructor.shift %}
-                        {% if shift == 'Night' %}
+                    {% for shift in instructor.shift -%}
+                        {% if shift == 'Night' -%}
                             checked
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 ">
                     <label class="form__input--checkbox" for="night">Night</label>
                     <input id="night" class="form__hidden" type="checkbox" value="Night" name="shift">
@@ -231,11 +231,11 @@
                 <div class="unified-group__row">
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'bodybuild' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'bodybuild' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="bodybuild">bodybuild</label>
                         <input id="bodybuild" class="form__hidden" type="checkbox" value="bodybuild" name="modalities">
@@ -243,11 +243,11 @@
 
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'crossfit' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'crossfit' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="crossfit">crossfit</label>
                         <input id="crossfit" class="form__hidden" type="checkbox" value="crossfit" name="modalities">
@@ -255,11 +255,11 @@
 
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'swimming' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'swimming' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="swimming">swimming</label>
                         <input id="swimming" class="form__hidden" type="checkbox" value="swimming" name="modalities">
@@ -267,11 +267,11 @@
 
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'box' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'box' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="box">box</label>
                         <input id="box" class="form__hidden" type="checkbox" value="box" name="modalities">
@@ -281,44 +281,44 @@
                 <div class="unified-group__row">
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'karate' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'karate' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="karate">karate</label>
                         <input id="karate" class="form__hidden" type="checkbox" value="karate" name="modalities">
                     </div>
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'jiu jitsu' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'jiu jitsu' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="jiujitsu">jiu jitsu</label>
                         <input id="jiujitsu" class="form__hidden" type="checkbox" value="jiu jitsu" name="modalities">
                     </div>
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'muay thai' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'muay thai' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="muayThai">muay thai</label>
                         <input id="muayThai" class="form__hidden" type="checkbox" value="muay thai" name="modalities">
                     </div>
                     <div 
                         class="form__checkbox--item
-                        {% for modality in instructor.modalities %}
-                            {% if modality == 'calisthenics' %}
+                        {% for modality in instructor.modalities -%}
+                            {% if modality == 'calisthenics' -%}
                                 checked
-                            {% endif %}
-                        {% endfor %}
+                            {%- endif %}
+                        {%- endfor %}
                     ">
                         <label class="form__input--checkbox" for="calisthenics">calisthenics</label>
                         <input id="calisthenics" class="form__hidden" type="checkbox" value="calisthenics" name="modalities">
