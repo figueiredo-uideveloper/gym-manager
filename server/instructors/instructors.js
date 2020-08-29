@@ -7,7 +7,7 @@ exports.index = function (req, res) {
     res.render('instructors/index', {instructors: data.instructors})
 }
 
-// show
+// view
 exports.view = function (req, res) {
     const { id } = req.params
     const foundInstructor = data.instructors.find(instructor => instructor.id == id)
@@ -71,7 +71,7 @@ exports.edit = function (req, res) {
     const foundInstructor = data.instructors.find(instructor => instructor.id == id)
 
     const instructor = {
-        ...foundInstructor,
+        ...foundInstructor
     }
 
     if (!foundInstructor) return res.send("Instructor not found!")

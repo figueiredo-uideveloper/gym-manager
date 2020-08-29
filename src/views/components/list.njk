@@ -14,7 +14,7 @@
 
     <div class="list__body">
         {% for instructor in instructors %}
-            <a href="/instructor/view/{{ instructor.id }}" class="list__row" instructor-id id="{{ instructor.id }}">
+            <a href="/instructor/{{ instructor.id }}/view" class="list__row" instructor-id id="{{ instructor.id }}">
                 <div class="list__column">{{ instructor.id }}</div>
                 <div class="list__column">{{ profile.profileList('profile_none.svg') }}<div class="list__uppercase ml-md">{{ instructor.fullName }}</div></div>
                 <div class="list__column">
