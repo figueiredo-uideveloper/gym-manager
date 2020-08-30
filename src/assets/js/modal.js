@@ -1,21 +1,27 @@
-let deleteButtons = Array.from(document.querySelectorAll('[delete-button]'));
-let modalCancelButton = document.querySelector('[modal-cancel-button]');
+const deleteButtons = Array.from(document.querySelectorAll('[delete-button]'))
+const modalCancelButton = document.querySelector('[modal-cancel-button]')
+const modalWrapper = document.querySelector('.modal-wrapper')
+const inputDeleteID = document.querySelector('#inputDeleteID')
 
 modalCancelButton.addEventListener("click", function(event){
-    event.preventDefault();
+    event.preventDefault()
 
-    toggleModal();
+    inputDeleteID.value = ''
+    toggleModal()
 });
 
 for (deleteButton of deleteButtons) {
     deleteButton.addEventListener("click", function(event){
-        event.preventDefault();
+        event.preventDefault()
 
-        toggleModal();
+        id = this.closest('[instructor-id]').id
+
+        inputDeleteID.value = id
+
+        toggleModal()
     });
 }
 
 function toggleModal() {
-    let modalWrapper = document.querySelector('.modal-wrapper');
-    modalWrapper.classList.toggle("show");
+    modalWrapper.classList.toggle("show")
 }
