@@ -1,5 +1,5 @@
 module.exports = {
-    age: function(timestamp) {
+    age: function (timestamp) {
         const today = new Date()
         const birthDay = new Date(timestamp)
 
@@ -12,7 +12,7 @@ module.exports = {
 
         return age
     },
-    phone: function(phoneNumber) {
+    phone: function (phoneNumber) {
         const DDD = phoneNumber.slice(0, 2)
         const firstPart = phoneNumber.slice(2, 7)
         const lastPart = phoneNumber.slice(7, 11)
@@ -21,7 +21,7 @@ module.exports = {
 
         return maskedPhone
     },
-    isObject: function(object) {
+    isObject: function (object) {
         return typeof(object) == "object"
     }
 }
