@@ -1,0 +1,1 @@
+const currentPage=location.pathname,navItems=document.querySelectorAll(".nav__item");for(item of navItems)currentPage.includes(item.getAttribute("href"))&&item.classList.add("active");

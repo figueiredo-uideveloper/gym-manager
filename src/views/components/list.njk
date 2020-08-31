@@ -8,13 +8,13 @@
             <div class="list__column">Modalities</div>
             <div class="list__column">Week Routine</div>
             <div class="list__column">Shifts</div>
-            <div class="list__column justify-end"><a href="/instructor/create" title="Add new instructor" class="button button--rounded button--primary">{% include "../icons/roundedPlus.njk" %}</a></div>
+            <div class="list__column justify-end"><a href="/instructors/create" title="Add new instructor" class="button button--rounded button--primary">{% include "../icons/roundedPlus.njk" %}</a></div>
         </div>
     </div>
 
     <div class="list__body">
         {% for instructor in instructors %}
-            <a href="/instructor/{{ instructor.id }}/view" class="list__row" instructor-id id="{{ instructor.id }}">
+            <a href="/instructors/{{ instructor.id }}/view" class="list__row" instructor-id id="{{ instructor.id }}">
                 <div class="list__column">{{ instructor.id }}</div>
                 <div class="list__column">{{ profile.profileList('profile_none.svg') }}<div class="list__uppercase ml-md">{{ instructor.fullName }}</div></div>
                 <div class="list__column">

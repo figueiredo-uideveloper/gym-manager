@@ -1,13 +1,11 @@
 const fs = require('fs')
-const data = require('../../db/data.json')
-const { age, phone, isObject } = require('../utils/main')
+const data = require('../db/data.json')
+const { age, phone, isObject } = require('./utils/main')
 
-// index
 exports.index = function (req, res) {
     res.render('instructors/index', {instructors: data.instructors})
 }
 
-// show
 exports.view = function (req, res) {
     const { id } = req.params
     const foundInstructor = data.instructors.find(instructor => instructor.id == id)
@@ -26,7 +24,10 @@ exports.view = function (req, res) {
     res.render('instructors/view', { instructor })
 }
 
-// create
+exports.create = function (req, res) {
+    res.render('instructors/create')
+}
+
 exports.post = function (req, res) {
     let { 
         fullName,
@@ -65,7 +66,6 @@ exports.post = function (req, res) {
 
 }
 
-// edit
 exports.edit = function (req, res) {
     const { id } = req.params
     const foundInstructor = data.instructors.find(instructor => instructor.id == id)
@@ -79,7 +79,6 @@ exports.edit = function (req, res) {
     res.render('instructors/edit', { instructor })
 }
 
-// update
 exports.put = function (req, res) {
     const { id } = req.body
     let index = 0
@@ -107,11 +106,10 @@ exports.put = function (req, res) {
     fs.writeFile('db/data.json', JSON.stringify(data, null, 4), function(err) {
         if(err) throw err
 
-        return res.redirect(`/instructor/${id}/view`)
+        return res.redirect(`/instructors/${id}/view`)
     })
 }
 
-// delete
 exports.delete = function (req, res) {
     const { id } = req.body
 

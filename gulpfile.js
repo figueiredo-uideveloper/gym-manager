@@ -26,7 +26,6 @@ gulp.task('sass:watch', function () {
 gulp.task('js', done => {
     gulp.src('src/assets/js/**/*.js')
         .pipe(uglify())
-        .pipe(concat('scripts.js'))
         .pipe(gulp.dest('public/js'))
 
     done()

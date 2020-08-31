@@ -6,6 +6,6 @@ for (editButton of editButtons) {
 
         id = this.closest('[instructor-id]').id
 
-        window.location.href = `/instructor/${id}/edit`
+        window.location.href = `/instructors/${id}/edit`
     });
 }

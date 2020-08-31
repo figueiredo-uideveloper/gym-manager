@@ -1,29 +1,26 @@
 const express = require('express')
 const routes = express.Router()
-const instructors = require("./instructors/instructors")
+const instructors = require("../controlers/instructors")
+const members = require("../controlers/members")
 
 routes.get('/', function (req, res) {
     res.redirect('/instructors')
 })
 
 routes.get('/instructors', instructors.index)
-
-routes.get('/members', function (req, res) {
-    res.render('members')
-})
-
-routes.get('/instructor/create', function (req, res) {
-    res.render('instructors/create')
-})
-
-routes.get('/instructor/:id/view', instructors.view)
-
-routes.get('/instructor/:id/edit', instructors.edit)
-
+routes.get('/instructors/create', instructors.create)
+routes.get('/instructors/:id/view', instructors.view)
+routes.get('/instructors/:id/edit', instructors.edit)
 routes.post("/instructors", instructors.post)
-
 routes.put("/instructors", instructors.put)
-
 routes.delete("/instructors", instructors.delete)
+
+routes.get('/members', members.index)
+routes.get('/members/create', members.create)
+routes.get('/members/:id/view', members.view)
+routes.get('/members/:id/edit', members.edit)
+routes.post("/members", members.post)
+routes.put("/members", members.put)
+routes.delete("/members", members.delete)
 
 module.exports = routes
