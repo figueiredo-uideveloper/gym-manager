@@ -1,1 +1,1 @@
-const editButtons=Array.from(document.querySelectorAll("[edit-button]"));for(editButton of editButtons)editButton.addEventListener("click",(function(t){t.preventDefault(),id=this.closest("[instructor-id]").id,window.location.href=`/instructors/${id}/edit`}));
+const editButtons=Array.from(document.querySelectorAll("[edit-button]"));for(editButton of editButtons)editButton.addEventListener("click",(function(t){t.preventDefault(),person=this.closest("[item-person]"),id=person.id,type=person.type,window.location.href=`/${type}s/${id}/edit`}));

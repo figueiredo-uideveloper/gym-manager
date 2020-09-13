@@ -4,8 +4,10 @@ for (editButton of editButtons) {
     editButton.addEventListener("click", function (event) {
         event.preventDefault();
 
-        id = this.closest('[instructor-id]').id
+        person = this.closest('[item-person]')
+        id = person.id
+        type = person.type
 
-        window.location.href = `/instructors/${id}/edit`
+        window.location.href = `/${type}s/${id}/edit`
     });
 }

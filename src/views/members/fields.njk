@@ -1,0 +1,520 @@
+<div class="form__step step-1 pr-md">
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="fullName">Full Name</label>
+            <input class="form__input--text" type="text" name="fullName" placeholder="Member Name" value="{{ member.fullName }}">
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="email">E-mail</label>
+            <input class="form__input--text" name="email" type="email" placeholder="Member E-mail" value="{{ member.email }}">
+        </div>
+        <div class="form__column">
+            <label class="form__label" for="phone">Phone</label>
+            <input class="form__input--text" name="phone" type="tel" placeholder="(00) 0000-0000" value="{{ member.phone }}">
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="birth">Date of Birth</label>
+            <input class="form__input--text" name="birth" type="date" placeholder="MM - DD - YYYY" value="{{ member.birth }}">
+        </div>
+        <div class="form__column">
+            <label class="form__label">Gender</label>
+            <div class="form__input--unified form__radio">
+                <div
+                    class="form__radio--item
+                    {% if member.gender == 'Male' %}
+                        checked
+                    {% endif %}
+                ">
+
+                    <label class="form__input--radio" for="male"><div class="form__icon mr-sm">{% include "../icons/male.njk" %}</div> Male</label>
+
+                    <input
+                        id="male"
+                        class="form__hidden"
+                        type="radio"
+                        value="Male"
+                        name="gender"
+                        {% if member.gender == 'Male' %}
+                            checked
+                        {% endif %}
+                    >
+                </div>
+
+                <div
+                    class="form__radio--item
+                    {% if member.gender == 'Female' %}
+                            checked
+                    {% endif %}
+                ">
+
+                    <label class="form__input--radio" for="female"><div class="form__icon mr-sm">{% include "../icons/female.njk" %}</div> Famale</label>
+
+                    <input
+                        id="female"
+                        class="form__hidden"
+                        type="radio"
+                        value="Female"
+                        name="gender"
+                        {% if member.gender == 'Female' %}
+                            checked
+                        {% endif %}
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label" for="height">Height</label>
+            <input class="form__input--text" name="height" type="text" placeholder="0.00 m" value="{{ member.height }}">
+        </div>
+        <div class="form__column">
+            <label class="form__label" for="weight">Weight</label>
+            <input class="form__input--text" name="weight" type="text" placeholder="0.00 kg" value="{{ member.weight }}">
+        </div>
+    </div>
+</div>
+<div class="form__step step-2 pl-md">
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label">Week Routine</label>
+            <div class="form__input--unified form__checkbox">
+                <div
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Mon' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor -%}
+                ">
+                    <label class="form__input--checkbox" for="mon">Mon</label>
+                    <input
+                        id="mon"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Mon"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Mon' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Tue' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="tue">Tue</label>
+                    <input
+                        id="tue"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Tue"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Tue' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Wed' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="wed">Wed</label>
+                    <input
+                        id="wed"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Wed"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Wed' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Thu' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="thu">Thu</label>
+                    <input
+                        id="thu"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Thu"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Thu' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Fri' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="fri">Fri</label>
+                    <input
+                        id="fri"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Fri"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Fri' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Sat' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="sat">Sat</label>
+                    <input
+                        id="sat"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Sat"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Sat' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for routine in member.routine -%}
+                        {% if routine == 'Sun' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="sun">Sun</label>
+                    <input
+                        id="sun"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Sun"
+                        name="routine"
+                        {% for routine in member.routine %}
+                            {% if routine == 'Sun' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label">Shifts</label>
+            <div class="form__input--unified form__checkbox">
+                <div 
+                    class="form__checkbox--item
+                    {% for shift in member.shift -%}
+                        {% if shift == 'Morning' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="morning">Morning</label>
+                    <input
+                        id="morning"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Morning"
+                        name="shift"
+                        {% for shift in member.shift %}
+                            {% if shift == 'Morning' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for shift in member.shift -%}
+                        {% if shift == 'Afternoon' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="afternoon">Afternoon</label>
+                    <input
+                        id="afternoon"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Afternoon"
+                        name="shift"
+                        {% for shift in member.shift %}
+                            {% if shift == 'Afternoon' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for shift in member.shift -%}
+                        {% if shift == 'Evening' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="evening">Evening</label>
+                    <input
+                        id="evening"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Evening"
+                        name="shift"
+                        {% for shift in member.shift %}
+                            {% if shift == 'Evening' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+
+                <div 
+                    class="form__checkbox--item
+                    {% for shift in member.shift -%}
+                        {% if shift == 'Night' -%}
+                            checked
+                        {%- endif %}
+                    {%- endfor %}
+                ">
+                    <label class="form__input--checkbox" for="night">Night</label>
+                    <input
+                        id="night"
+                        class="form__hidden"
+                        type="checkbox"
+                        value="Night"
+                        name="shift"
+                        {% for shift in member.shift %}
+                            {% if shift == 'Night' %}
+                                checked
+                            {% endif %}
+                        {% endfor %}>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__column">
+            <label class="form__label">Modalities</label>
+
+            <div class="form__input--unified-group form__checkbox">
+                <div class="unified-group__row">
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'bodybuild' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="bodybuild">bodybuild</label>
+                        <input
+                            id="bodybuild"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="bodybuild"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'bodybuild' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'crossfit' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="crossfit">crossfit</label>
+                        <input
+                            id="crossfit"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="crossfit"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'crossfit' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'swimming' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="swimming">swimming</label>
+                        <input
+                            id="swimming"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="swimming"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'swimming' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'box' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="box">box</label>
+                        <input
+                            id="box"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="box"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'box' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+                </div>
+
+                <div class="unified-group__row">
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'karate' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="karate">karate</label>
+                        <input
+                            id="karate"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="karate"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'karate' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'jiu jitsu' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="jiujitsu">jiu jitsu</label>
+                        <input
+                            id="jiujitsu"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="jiu jitsu"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'jiu jitsu' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'muay thai' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="muayThai">muay thai</label>
+                        <input
+                            id="muayThai"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="muay thai"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'muay thai' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+                    <div 
+                        class="form__checkbox--item
+                        {% for modality in member.modalities -%}
+                            {% if modality == 'calisthenics' -%}
+                                checked
+                            {%- endif %}
+                        {%- endfor %}
+                    ">
+                        <label class="form__input--checkbox" for="calisthenics">calisthenics</label>
+                        <input
+                            id="calisthenics"
+                            class="form__hidden"
+                            type="checkbox"
+                            value="calisthenics"
+                            name="modalities"
+                            {% for modality in member.modalities %}
+                                {% if modality == 'calisthenics' %}
+                                    checked
+                                {% endif %}
+                            {% endfor %}>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

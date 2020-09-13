@@ -5,9 +5,14 @@
 {% endblock header %}
 
 {% block content %}
-    {% include "../body.njk" %}
+    <div class="container">
+        {% include "./list.njk" %}
+    </div>
 {% endblock content %}
 
 {% block scripts %}
     <script src="/js/navigation.js"></script>
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/editRedirect.js"></script>
+    <script src="/js/deleteModalAction.js"></script>
 {% endblock scripts %}

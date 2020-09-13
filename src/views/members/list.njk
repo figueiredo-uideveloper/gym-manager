@@ -1,61 +1,61 @@
-{% import './profileList.njk' as profile%}
+{% import '../components/profileList.njk' as profile%}
 
 <div class="list">
     <div class="list__header">
         <div class="list__row">
             <div class="list__column">ID</div>
-            <div class="list__column">Instructor</div>
+            <div class="list__column">Member</div>
             <div class="list__column">Modalities</div>
             <div class="list__column">Week Routine</div>
             <div class="list__column">Shifts</div>
-            <div class="list__column justify-end"><a href="/instructors/create" title="Add new instructor" class="button button--rounded button--primary">{% include "../icons/roundedPlus.njk" %}</a></div>
+            <div class="list__column justify-end"><a href="/members/create" title="Add new member" class="button button--rounded button--primary">{% include "../icons/roundedPlus.njk" %}</a></div>
         </div>
     </div>
 
     <div class="list__body">
-        {% for instructor in instructors %}
-            <a href="/instructors/{{ instructor.id }}/view" class="list__row" instructor-id id="{{ instructor.id }}">
-                <div class="list__column">{{ instructor.id }}</div>
-                <div class="list__column">{{ profile.profileList('profile_none.svg') }}<div class="list__uppercase ml-md">{{ instructor.fullName }}</div></div>
+        {% for member in members %}
+            <a href="/members/{{ member.id }}/view" class="list__row" item-person type="member" id="{{ member.id }}">
+                <div class="list__column">{{ member.id }}</div>
+                <div class="list__column">{{ profile.profileList('profile_none.svg') }}<div class="list__uppercase ml-md">{{ member.fullName }}</div></div>
                 <div class="list__column">
-                    {% if instructor.modalities.length > 3 %}
+                    {% if member.modalities.length > 3 %}
                         {% for i in range(0, 3) %}
-                            <div class="tag mr-sm"> {{ instructor.modalities[i] }} </div>
-                            {% if loop.last %} <div class="tag mr-sm"> +{{ instructor.modalities.length - 3 }} </div> {% endif %}
+                            <div class="tag mr-sm"> {{ member.modalities[i] }} </div>
+                            {% if loop.last %} <div class="tag mr-sm"> +{{ member.modalities.length - 3 }} </div> {% endif %}
                         {% endfor %}
                     {% else %}
-                        {% for i in range(0, instructor.modalities.length) %}
-                            <div class="tag mr-sm"> {{ instructor.modalities[i] }} </div>
+                        {% for i in range(0, member.modalities.length) %}
+                            <div class="tag mr-sm"> {{ member.modalities[i] }} </div>
                         {% endfor %}
                     {% endif %}
                 </div>
                 <div class="list__column">
-                    {% if instructor.routine.length > 3 %}
+                    {% if member.routine.length > 3 %}
                         {% for i in range(0, 3) %}
-                            {{ instructor.routine[i] }}{% if loop.index < 3 %} - {% endif %}
-                            {% if loop.last %} <div class="tag tag--default ml-xs"> +{{ instructor.routine.length - 3 }} </div> {% endif %}
+                            {{ member.routine[i] }}{% if loop.index < 3 %} - {% endif %}
+                            {% if loop.last %} <div class="tag tag--default ml-xs"> +{{ member.routine.length - 3 }} </div> {% endif %}
                         {% endfor %}
                     {% else %}
-                        {% for i in range(0, instructor.routine.length) %}
-                            {{ instructor.routine[i] }}{% if loop.index < instructor.routine.length %} - {% endif %}
+                        {% for i in range(0, member.routine.length) %}
+                            {{ member.routine[i] }}{% if loop.index < member.routine.length %} - {% endif %}
                         {% endfor %}
                     {% endif %}
                 </div>
                 <div class="list__column">
-                    {% if instructor.shift.length > 2 %}
+                    {% if member.shift.length > 2 %}
                         {% for i in range(0, 2) %}
-                            {{ instructor.shift[i] }}{% if loop.index < 2 %}, {% endif %}
-                            {% if loop.last %} <div class="tag tag--default ml-xs"> +{{ instructor.shift.length - 2 }} </div> {% endif %}
+                            {{ member.shift[i] }}{% if loop.index < 2 %}, {% endif %}
+                            {% if loop.last %} <div class="tag tag--default ml-xs"> +{{ member.shift.length - 2 }} </div> {% endif %}
                         {% endfor %}
                     {% else %}
-                        {% for i in range(0, instructor.shift.length) %}
-                            {{ instructor.shift[i] }}{% if loop.index < instructor.shift.length %}, {% endif %}
+                        {% for i in range(0, member.shift.length) %}
+                            {{ member.shift[i] }}{% if loop.index < member.shift.length %}, {% endif %}
                         {% endfor %}
                     {% endif %}
                 </div>
                 <div class="list__column list__column--border-left justify-end">
                     <div class="dropdown-wrapper">
-                        {% include "./buttonMore.njk" %}
+                        {% include "../components/buttonMore.njk" %}
                         <div class="dropdown">
                             <div class="dropdown__item" edit-button>
                                 <div class="dropdown__icon">{% include "../icons/pencil.njk" %}</div>
@@ -165,4 +165,4 @@
     </div>
 </div>
 
-{% include './modal.njk' %}
+{% include '../components/modal.njk' %}
