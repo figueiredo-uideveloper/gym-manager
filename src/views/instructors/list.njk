@@ -164,5 +164,5 @@
         </div> #}
     </div>
 </div>
-
-{% include '../components/modal.njk' %}
+{% import '../components/modal.njk' as modal %}
+{{ modal.action('instructors') }}

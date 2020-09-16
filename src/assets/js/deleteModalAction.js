@@ -14,7 +14,7 @@ for (deleteButton of deleteButtons) {
     deleteButton.addEventListener("click", function(event){
         event.preventDefault()
 
-        id = this.closest('[instructor-id]').id
+        id = this.closest('[item-person]').id
 
         inputDeleteID.value = id
 
