@@ -6,8 +6,21 @@
 
 {% block content %}
     <div class="container">
-        {% include "./list.njk" %}
+        {% import "../components/list.njk" as list %}
+        {{ list.registrationData(
+            labelID = 'ID',
+            labelPerson = 'Instructor',
+            labelModalities = 'Modalities',
+            labelRoutine = 'Week Routine',
+            labelShifts = 'Shifts',
+            partUrl = 'instructors',
+            personType = 'instructor',
+            dataObject = instructors
+        ) }}
     </div>
+
+    {% import '../components/modal.njk' as modal %}
+    {{ modal.action('instructors') }}
 {% endblock content %}
 
 {% block scripts %}
