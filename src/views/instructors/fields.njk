@@ -12,18 +12,19 @@
         </div>
         <div class="form__column">
             <label class="form__label" for="phone">Phone</label>
-            <input class="form__input--text" name="phone" type="tel" placeholder="(00) 0000-0000" value="{{ instructor.phone }}">
+            <input data-mask="phone" class="form__input--text input-masked" name="phone" type="text" placeholder="(00) 0000-0000" value="{{ instructor.phone }}">
         </div>
     </div>
     <div class="form__row">
         <div class="form__column">
             <label class="form__label" for="birth">Date of Birth</label>
-            <input class="form__input--text" name="birth" type="date" placeholder="MM - DD - YYYY" value="{{ instructor.birth }}">
+            <input id="date" class="form__input--text" name="birth" type="text" placeholder="DD - MM - YYYY" value="{{ instructor.birth }}">
         </div>
         <div class="form__column">
             <label class="form__label">Gender</label>
             <div class="form__input--unified form__radio">
                 <div
+                    data-gender="male"
                     class="form__radio--item
                     {% if instructor.gender == 'Male' %}
                         checked
@@ -45,6 +46,7 @@
                 </div>
 
                 <div
+                    data-gender="female"
                     class="form__radio--item
                     {% if instructor.gender == 'Female' %}
                             checked
@@ -70,11 +72,11 @@
     <div class="form__row">
         <div class="form__column">
             <label class="form__label" for="height">Height</label>
-            <input class="form__input--text" name="height" type="text" placeholder="0.00 m" value="{{ instructor.height }}">
+            <input data-mask="height" class="form__input--text input-masked" name="height" type="text" placeholder="0.00 m" value="{{ instructor.height }}">
         </div>
         <div class="form__column">
             <label class="form__label" for="weight">Weight</label>
-            <input class="form__input--text" name="weight" type="text" placeholder="0.00 kg" value="{{ instructor.weight }}">
+            <input data-mask="weight" class="form__input--text input-masked" name="weight" type="text" placeholder="0.00 kg" value="{{ instructor.weight }}">
         </div>
     </div>
 </div>
@@ -518,3 +520,5 @@
         </div>
     </div>
 </div>
+<script src="https://unpkg.com/imask"></script>
+<script src="/js/mask.js"></script>
