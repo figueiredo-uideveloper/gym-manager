@@ -14,12 +14,12 @@ const removeChecked = function () {
 }
 
 const applyChecked = function (input) {
+    input.querySelector('input').checked = true
     input.classList.add('checked');
 }
 
 radioInputs.forEach((input)=>{
     if (!containsChecked && input.dataset.gender == 'male') {
-        input.querySelector('input').checked = true
         applyChecked(input)
     }
 
