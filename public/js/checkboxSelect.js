@@ -1,0 +1,1 @@
+const checkboxInputs=document.querySelectorAll(".form__checkbox--item"),toggleChecked=function(e){e.classList.toggle("checked")};checkboxInputs.forEach(e=>{e.addEventListener("mouseup",(function(){toggleChecked(e)}))});

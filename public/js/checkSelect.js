@@ -1,0 +1,1 @@
+const checkInputs=document.querySelectorAll("form__checkbox--item"),removeChecked=function(){radioInputs.forEach(e=>{e.classList.remove("checked")})},applyChecked=function(e){e.querySelector("input").checked=!0,e.classList.add("checked")};checkInputs.forEach(e=>{e.addEventListener("click",(function(){radioInputs.forEach(e=>{e.classList.remove("checked")}),applyChecked(e)}))});

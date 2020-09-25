@@ -24,6 +24,7 @@
             <label class="form__label">Gender</label>
             <div class="form__input--unified form__radio">
                 <div
+                    data-gender="male"
                     class="form__radio--item
                     {% if member.gender == 'Male' %}
                         checked
@@ -45,6 +46,7 @@
                 </div>
 
                 <div
+                    data-gender="female"
                     class="form__radio--item
                     {% if member.gender == 'Female' %}
                             checked
