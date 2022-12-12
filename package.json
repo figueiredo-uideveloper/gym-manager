@@ -10,7 +10,7 @@
     "start": "gulp"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gulp-uglify-es": "^2.0.0",
     "imask": "^6.0.5",
     "method-override": "^3.0.0",
